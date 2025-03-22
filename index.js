@@ -121,16 +121,18 @@ const showProductData = (infos) => {
     document.getElementById("product-info").innerHTML = `
     
     
-            <div
+        <div
           id="temp-section"
-          class="w-11/12 flex flex-col justify-center items-center py-20 bg-base-200 rounded-md col-span-4"
+          class="w-full md:w-10/12 flex flex-col justify-center items-center py-20 bg-base-200 rounded-md col-span-4"
         >
           <div class="w-[150px] text-center">
             <img class="w-full" src="images/error.webp" alt="" />
           </div>
-          <div class="w-[650px] text-center">
-            <h2 class="text-[40px] font-bold">No Information Available</h2>
-            <p>
+          <div class="w-full md:w-[650px] text-center">
+            <h2 class="text-2xl md:text-[40px] font-bold">
+              No Information Available
+            </h2>
+            <p class="text-sm md:text-base">
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum is that it has a.
