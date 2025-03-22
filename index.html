@@ -33,9 +33,12 @@
         font-weight: 400;
         font-style: normal;
       }
+      #body {
+        scroll-behavior: smooth;
+      }
     </style>
   </head>
-  <body class="lato-regular">
+  <body id="body" class="lato-regular">
     <header class="mb-[200px]">
       <nav class="w-10/12 mx-auto">
         <div class="navbar">
@@ -87,7 +90,10 @@
             the readable content of a page when looking at its layout. The point
             of using Lorem Ipsum is that it has a.
           </p>
-          <button class="btn btn-xl mt-10 bg-[#0E7A81] text-white rounded-md">
+          <button
+            onclick="smoothScroll('adopt-section')"
+            class="btn btn-xl mt-10 bg-[#0E7A81] text-white rounded-md"
+          >
             View More
           </button>
         </div>

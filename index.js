@@ -1,3 +1,13 @@
+// smooth scroll function------------------------------------
+
+function smoothScroll(id) {
+  console.log(id);
+  const section = document.getElementById(id);
+  const offset = 80;
+  const sectionTop = section.offsetTop - offset;
+  window.scrollTo({ top: sectionTop, behavior: "smooth" });
+}
+
 // Countdown method-----------------------------------------
 const Countdown = (id) => {
   const btnadd = document.getElementById(id);
