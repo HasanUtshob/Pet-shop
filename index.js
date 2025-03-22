@@ -154,8 +154,8 @@ const showProductData = (infos) => {
               <hr>
                  <div class="card-actions justify-around items-center">
                  <div>  <div class="badge badge-outline"><i class="fa-solid fa-thumbs-up"></i></div> </div>
-                 <a   class="space-x-4"> <a onclick="Countdown(${info.petId})" id="${info.petId}"  class="badge badge-outline btn text-[#0E7A81]">Adopt</a>
-                <a id="${info.petId}" onclick="loadModal(${info.petId})" class="badge badge-outline btn text-[#0E7A81]">Details</a> </a>
+                <a onclick="Countdown(${info.petId})" id="${info.petId}"  class="btn btn-xs text-[#0E7A81]">Adopt</a>
+                <a id="${info.petId}" onclick="loadModal(${info.petId})" class="btn btn-xs text-[#0E7A81]">Details</a>
               </div>
             </div>
           </div>
