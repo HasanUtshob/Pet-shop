@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Shop</title>
+    <!-- daisy UI & Tailwind Css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font link up -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font Awsome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .lato-regular {
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="lato-regular">
+    <header class="mb-[200px]">
+      <nav class="w-10/12 mx-auto">
+        <div class="navbar">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              >
+                <li><a>Item 1</a></li>
+                <li>
+                  <a>Parent</a>
+                  <ul class="p-2">
+                    <li><a>Submenu 1</a></li>
+                    <li><a>Submenu 2</a></li>
+                  </ul>
+                </li>
+                <li><a>Item 3</a></li>
+              </ul>
+            </div>
+            <img src="images/logo.webp" alt="" srcset="" />
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 gap-4 text-xl">
+              <a>Home</a>
+              <a>Shop</a>
+              <a>Contact</a>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a> <img class="w-12" src="images/login.png" alt="" /></a>
+          </div>
+        </div>
+      </nav>
+      <section id="hero-container" class="w-10/12 mx-auto mt-10">
+        <div class="w-full md:w-[750px] mx-auto text-center">
+          <h4
+            class="text-[18px] md:text-[24px] font-bold text-[#13131380] mb-6"
+          >
+            Bringing Families Together ❤️‍🔥
+          </h4>
+          <h1 class="text-[40px] md:text-[65px] font-bold text-[#131313]">
+            Your Path to Adoption Starts Here
+          </h1>
+          <p class="text-sm md:text-base">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a.
+          </p>
+          <button class="btn btn-xl mt-10 bg-[#0E7A81] text-white rounded-md">
+            View More
+          </button>
+        </div>
+        <img
+          class="w-full md:w-[750px] mx-auto mt-10"
+          src="images/pet.webp"
+          alt=""
+        />
+      </section>
+    </header>
+    <main>
+      <section id="adopt-section" class="w-10/12 mx-auto">
+        <div class="w-full md:w-[750px] mx-auto text-center space-y-5 mb-5">
+          <h1 class="text-3xl md:text-5xl font-bold">Adopt Your Best Friend</h1>
+          <p class="text-sm md:text-base text-[#13131380]">
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a.
+          </p>
+        </div>
+
+        <div
+          id="category-btn"
+          class="w-full md:w-10/12 mx-auto flex gap-5 justify-center"
+        >
+          <!-- ক্যাটাগরি বাটনগুলি এখানে লোড হবে -->
+        </div>
+      </section>
+
+      <div class="w-10/12 mx-auto flex justify-between">
+        <div>
+          <h3 class="text-[20px] font-bold">Best Deal For you</h3>
+        </div>
+        <div>
+          <button class="btn bg-[#0E7A81] text-white rounded-t-md">
+            Sort By Price
+          </button>
+        </div>
+      </div>
+
+      <section
+        class="w-10/12 mx-auto flex flex-col md:flex-row mt-5 mb-[200px]"
+      >
+        <!-- প্রথম ডিভ (col-span-4) -->
+        <div
+          id="product-info"
+          class="w-full md:w-10/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mt-5 hidden"
+        >
+          <!-- প্রথম ডিভের কন্টেন্ট এখানে লোড হবে -->
+        </div>
+
+        <!-- temp-section (যদি কোনো ডাটা না থাকে) -->
+        <div
+          id="temp-section"
+          class="w-full md:w-10/12 flex flex-col justify-center items-center py-20 bg-base-200 rounded-md col-span-4"
+        >
+          <div class="w-[150px] text-center">
+            <img class="w-full" src="images/error.webp" alt="" />
+          </div>
+          <div class="w-full md:w-[650px] text-center">
+            <h2 class="text-2xl md:text-[40px] font-bold">
+              No Information Available
+            </h2>
+            <p class="text-sm md:text-base">
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout. The
+              point of using Lorem Ipsum is that it has a.
+            </p>
+          </div>
+        </div>
+
+        <!-- দ্বিতীয় ডিভ (col-span-1) -->
+        <div
+          class="w-full md:w-2/12 sticky top-0 overflow-y-auto shadow-md p-3"
+        >
+          <div class="grid grid-cols-2 md:grid-cols-1 gap-1">
+            <img src="images/1.png" alt="" />
+            <img src="images/2.png" alt="" />
+            <img src="images/3.png" alt="" />
+            <img src="images/4.png" alt="" />
+            <img src="images/5.png" alt="" />
+            <img src="images/6.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Open the modal using ID.showModal() method -->
+      <dialog id="modal-Show" class="modal">
+        <div class="modal-box w-11/12 max-w-5xl">
+          <div id="cardModal"></div>
+          <div class="modal-action">
+            <form method="dialog" class="w-full">
+              <button class="btn text-[#0E7A81] btn-block">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </main>
+    <footer class="bg-black mt-10">
+      <section
+        class="w-10/12 p-[50px] md:p-[100px] flex flex-col md:flex-row justify-between"
+      >
+        <div class="py-6">
+          <div class="flex items-center gap-2 mb-3">
+            <img src="images/logo.webp" alt="" srcset="" />
+            <h1 class="text-white text-2xl md:text-3xl font-bold">Peddy</h1>
+          </div>
+          <div class="text-white mb-3 space-y-3">
+            <p>Location: av. Washington 165, NY CA 54003</p>
+            <p>Phone: +31 85 964 47 25</p>
+            <p>Email: info@yourdomain.com</p>
+            <p>Openings hours: 9.00 AM - 5.00 PM</p>
+          </div>
+          <div class="flex items-center gap-1">
+            <img src="images/Group 2.png" alt="" />
+            <img src="images/Group 6.png" alt="" />
+            <img src="images/Group 7.png" alt="" />
+            <img src="images/x-2 1.png" alt="" />
+          </div>
+        </div>
+        <div class="mt-6 md:mt-0">
+          <h2 class="text-xl md:text-2xl text-white font-bold mb-4">
+            Useful Links
+          </h2>
+          <ul class="text-white space-y-3">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Animals</li>
+            <li>Foundation</li>
+            <li>Contacts</li>
+          </ul>
+        </div>
+        <div class="mt-6 md:mt-0 space-y-5">
+          <h2 class="text-white text-xl md:text-2xl font-bold mb-3">
+            Drop your Massage
+          </h2>
+          <input
+            type="text"
+            placeholder="Enter your Email"
+            class="input input-accent block"
+          />
+          <button class="btn btn-primary btn-block text-white">
+            Subscribe
+          </button>
+        </div>
+      </section>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
